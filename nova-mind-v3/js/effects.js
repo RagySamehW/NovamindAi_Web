@@ -213,7 +213,7 @@
   const el     = document.querySelector('.typed-word');
   const cursor = document.querySelector('.typed-cursor');
   if (!el) return;
-  const words = ['websites', 'mobile apps', 'AI systems', 'automation', 'e-commerce', 'custom software'];
+  const words = ['e-commerce ops', 'Meta ad spend', 'retail workflows', 'mobile apps', 'WhatsApp chaos', 'store data'];
   let wi = 0, ci = 0, deleting = false;
 
   function tick() {
