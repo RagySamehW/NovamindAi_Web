@@ -34,6 +34,7 @@ jobs:
           cp -r nova-mind-v3/css dist/
           cp -r nova-mind-v3/js dist/
           cp -r nova-mind-v3/pages dist/
+          cp -r nova-mind-v3/img dist/
           echo "novamindai.co.uk" > dist/CNAME
 
       - name: Setup Pages
