@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/style.css"/>
   <link rel="stylesheet" href="css/features.css"/>
+  <script>(function(){var t=localStorage.getItem('nm-theme');if(t)document.documentElement.setAttribute('data-theme',t);})()</script>
 </head>
 <body>
 
@@ -28,6 +29,15 @@
 
 <div class="scroll-indicator" id="scroll-bar"></div>
 <canvas id="bg-canvas"></canvas>
+
+<!-- AURORA BACKGROUND -->
+<div class="aurora" aria-hidden="true">
+  <div class="aurora-blob ab1"></div>
+  <div class="aurora-blob ab2"></div>
+  <div class="aurora-blob ab3"></div>
+  <div class="aurora-blob ab4"></div>
+</div>
+
 <div id="cursor"><div id="cursor-dot"></div><div id="cursor-ring"></div></div>
 
 <!-- COOKIE BANNER -->
@@ -57,6 +67,7 @@
       <span id="visitors-count">12</span> online
     </div>
     <button class="nav-pill" onclick="scrollTo('contact')">Get a Quote ↗</button>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode">☀</button>
   </div>
   <button class="nav-hamburger" id="hamburger">&#9776;</button>
 </nav>
@@ -79,8 +90,8 @@
 
   <h1 class="hero-title">
     We turn your ideas<br/>
-    into <em>powerful</em><br/>
-    <span class="hero-line2">digital products.</span>
+    into <em><span class="typed-word">websites</span></em><span class="typed-cursor">|</span><br/>
+    <span class="hero-line2">that change everything.</span>
   </h1>
 
   <p class="hero-sub">
@@ -114,6 +125,13 @@
 
   <div class="hero-scroll-hint fade-up">
     <div class="scroll-line"></div>Scroll to explore
+  </div>
+
+  <!-- Floating decorative shapes -->
+  <div class="hero-shapes" aria-hidden="true">
+    <div class="hs hs1"></div>
+    <div class="hs hs2"></div>
+    <div class="hs hs3"></div>
   </div>
 </section>
 
@@ -156,6 +174,85 @@
     <span class="m-item">UI/UX Design</span><span class="m-sep">◆</span>
   </div>
 </div>
+
+<!-- HORIZONTAL SHOWCASE -->
+<section id="showcase">
+  <div class="showcase-sticky-outer">
+    <div class="showcase-sticky-inner">
+      <div class="showcase-header fade-up">
+        <div class="sec-eyebrow">What We Build</div>
+        <h2 class="sec-title">Everything your business needs</h2>
+        <p class="sec-sub" style="max-width:480px;margin:0 auto">Scroll to explore our capabilities — from sleek web apps to intelligent AI systems.</p>
+      </div>
+      <div class="showcase-track-wrap">
+        <div class="showcase-track">
+          <div class="sc-card sc-web">
+            <div class="sc-card-bg"></div>
+            <div class="sc-card-content">
+              <div class="sc-card-icon">🌐</div>
+              <div class="sc-card-tag">Web Development</div>
+              <h3>Websites & Web Apps</h3>
+              <p>From blazing-fast landing pages to complex SaaS platforms — we build web experiences that convert.</p>
+            </div>
+          </div>
+          <div class="sc-card sc-mobile">
+            <div class="sc-card-bg"></div>
+            <div class="sc-card-content">
+              <div class="sc-card-icon">📱</div>
+              <div class="sc-card-tag">Mobile</div>
+              <h3>iOS & Android Apps</h3>
+              <p>Cross-platform apps with native performance. Built with React Native for maximum reach and speed.</p>
+            </div>
+          </div>
+          <div class="sc-card sc-ai">
+            <div class="sc-card-bg"></div>
+            <div class="sc-card-content">
+              <div class="sc-card-icon">🤖</div>
+              <div class="sc-card-tag">Artificial Intelligence</div>
+              <h3>AI & Machine Learning</h3>
+              <p>Custom AI assistants, smart automation, data pipelines, and predictive systems — trained on your data.</p>
+            </div>
+          </div>
+          <div class="sc-card sc-ecomm">
+            <div class="sc-card-bg"></div>
+            <div class="sc-card-content">
+              <div class="sc-card-icon">🛒</div>
+              <div class="sc-card-tag">E-Commerce</div>
+              <h3>Online Stores That Sell</h3>
+              <p>High-converting stores with smart recommendations, multi-currency, and seamless checkout flows.</p>
+            </div>
+          </div>
+          <div class="sc-card sc-auto">
+            <div class="sc-card-bg"></div>
+            <div class="sc-card-content">
+              <div class="sc-card-icon">⚙️</div>
+              <div class="sc-card-tag">Automation</div>
+              <h3>Business Process Automation</h3>
+              <p>Eliminate repetitive tasks. Connect your tools, automate workflows, and reclaim hours every week.</p>
+            </div>
+          </div>
+          <div class="sc-card sc-sys">
+            <div class="sc-card-bg"></div>
+            <div class="sc-card-content">
+              <div class="sc-card-icon">🏗️</div>
+              <div class="sc-card-tag">Enterprise Systems</div>
+              <h3>Custom CRM & ERP</h3>
+              <p>Built exactly for how your business runs — not adapted from a generic off-the-shelf product.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="showcase-progress">
+        <div class="sp-dot active"></div>
+        <div class="sp-dot"></div>
+        <div class="sp-dot"></div>
+        <div class="sp-dot"></div>
+        <div class="sp-dot"></div>
+        <div class="sp-dot"></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ── SERVICES + SELECTOR ── -->
 <section id="services">
@@ -257,6 +354,43 @@
         <div class="roi-card"><div class="roi-card-label">3-Year ROI</div><div class="roi-card-value sm" id="roi-3yr">0×</div></div>
       </div>
       <button class="btn-glow" style="width:100%;margin-top:1rem;border-radius:12px" onclick="scrollTo('contact')">Get a Real Estimate →</button>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="process-header fade-up" style="text-align:center;padding-bottom:1rem">
+    <div class="sec-eyebrow">How We Work</div>
+    <h2 class="sec-title">From idea to launch in 4 steps</h2>
+    <p class="sec-sub" style="max-width:520px;margin:0 auto">Our battle-tested process gets your product live fast — without cutting corners on quality.</p>
+  </div>
+  <div class="process-path-wrap fade-up">
+    <svg class="process-svg" viewBox="0 0 1000 40" preserveAspectRatio="none">
+      <path class="process-path-glow" d="M 125,20 L 375,20 L 375,20 L 625,20 L 625,20 L 875,20"/>
+      <path class="process-path"      d="M 125,20 L 375,20 L 375,20 L 625,20 L 625,20 L 875,20"/>
+    </svg>
+  </div>
+  <div class="process-steps fade-up">
+    <div class="ps-item">
+      <div class="ps-num">01</div>
+      <h4>Discovery</h4>
+      <p>We map your goals, users, and technical requirements. No guesswork — just clarity.</p>
+    </div>
+    <div class="ps-item">
+      <div class="ps-num">02</div>
+      <h4>Design</h4>
+      <p>High-fidelity prototypes you can click through before a single line of code is written.</p>
+    </div>
+    <div class="ps-item">
+      <div class="ps-num">03</div>
+      <h4>Build</h4>
+      <p>Agile sprints, weekly demos, and full transparency. You see progress every step of the way.</p>
+    </div>
+    <div class="ps-item">
+      <div class="ps-num">04</div>
+      <h4>Launch & Support</h4>
+      <p>We deploy, monitor, and stay on call. Your product keeps improving after go-live.</p>
     </div>
   </div>
 </section>
@@ -602,9 +736,25 @@
   </div>
 </footer>
 
+<!-- BACK TO TOP -->
+<button id="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle class="btt-bg" cx="26" cy="26" r="25"/>
+    <circle class="btt-ring" cx="26" cy="26" r="18"/>
+    <polyline class="btt-arrow" points="19,29 26,21 33,29"/>
+  </svg>
+</button>
+
+<!-- PAGE TRANSITION -->
+<div id="page-transition" aria-hidden="true">
+  <div class="pt-panel"></div>
+  <div class="pt-logo">Nova<span style="color:var(--a1)">.</span>Mind</div>
+</div>
+
 <script src="js/main.js"></script>
 <script src="js/features.js"></script>
 <script src="js/chat.js"></script>
 <script src="js/roi.js"></script>
+<script src="js/effects.js"></script>
 </body>
 </html>

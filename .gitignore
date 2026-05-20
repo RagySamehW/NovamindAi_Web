@@ -1,0 +1,4 @@
+node_modules/
+nova-mind-v3/api/nova-mind.db
+.env
+*.env
