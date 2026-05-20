@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Case Study: Orion Predictive Analytics — Nova Mind</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    .case-hero { padding: 160px 6% 80px; background: var(--bg2); }
+    .back-link { color: var(--a1); text-decoration: none; font-size: .82rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; margin-bottom: 2.5rem; font-family: 'Plus Jakarta Sans', sans-serif; transition: gap .2s; }
+    .back-link:hover { gap: 10px; }
+    .case-tag { font-size: .7rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--a1); margin-bottom: 1rem; font-family: 'Plus Jakarta Sans', sans-serif; }
+    .case-title { font-family: 'Instrument Serif', serif; font-size: clamp(2rem, 4vw, 3.5rem); color: #fff; line-height: 1.12; letter-spacing: -1px; margin-bottom: 1.5rem; }
+    .case-meta { display: flex; gap: 3rem; flex-wrap: wrap; }
+    .case-meta-item label { font-size: .7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 4px; font-family: 'Plus Jakarta Sans', sans-serif; }
+    .case-meta-item span { font-size: .9rem; color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; }
+    .case-body { padding: 80px 6%; max-width: 900px; margin: 0 auto; }
+    .case-body h2 { font-family: 'Instrument Serif', serif; font-size: 1.8rem; color: #fff; margin: 2.5rem 0 1rem; }
+    .case-body p { color: var(--muted2); line-height: 1.85; margin-bottom: 1rem; font-family: 'Plus Jakarta Sans', sans-serif; }
+    .results-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin: 2rem 0; }
+    @media(max-width:600px){ .results-grid { grid-template-columns: 1fr; } }
+    .result-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; text-align: center; }
+    .result-n { font-family: 'Instrument Serif', serif; font-size: 2.5rem; color: var(--a1); }
+    .result-l { font-size: .78rem; color: var(--muted); margin-top: 4px; font-family: 'Plus Jakarta Sans', sans-serif; }
+    .tech-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.5rem 0; }
+    .tech-tag { font-size: .75rem; font-weight: 600; padding: 5px 12px; border-radius: 100px; background: var(--surface); border: 1px solid var(--border); color: var(--muted2); font-family: 'Plus Jakarta Sans', sans-serif; }
+    .cta-strip { background: var(--bg2); border-top: 1px solid var(--border); padding: 5rem 6%; text-align: center; }
+    .cta-strip h2 { font-family: 'Instrument Serif', serif; font-size: 2.2rem; color: #fff; margin-bottom: 1rem; }
+    .cta-strip p { color: var(--muted2); margin-bottom: 2rem; font-family: 'Plus Jakarta Sans', sans-serif; }
+  </style>
+</head>
+<body style="cursor:auto">
+
+<nav id="navbar" style="position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:500;display:flex;align-items:center;gap:2rem;background:rgba(7,10,20,.75);backdrop-filter:blur(24px);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:.7rem 1.5rem">
+  <a href="../index.html" style="font-family:'Instrument Serif',serif;font-size:1.15rem;color:#fff;text-decoration:none">Nova<span style="color:#4f7fff">.</span>Mind</a>
+  <a href="../index.html#work" style="color:#8892b0;font-size:.82rem;font-family:'Plus Jakarta Sans',sans-serif;text-decoration:none">← All Work</a>
+</nav>
+
+<div class="case-hero">
+  <a href="../index.html#work" class="back-link">← Back to Portfolio</a>
+  <div class="case-tag">Machine Learning · SaaS · Demand Forecasting</div>
+  <h1 class="case-title">Orion Predictive<br/>Analytics Platform</h1>
+  <div class="case-meta">
+    <div class="case-meta-item"><label>Client</label><span>Orion Group</span></div>
+    <div class="case-meta-item"><label>Industry</label><span>Retail & Supply Chain</span></div>
+    <div class="case-meta-item"><label>Timeline</label><span>14 weeks</span></div>
+    <div class="case-meta-item"><label>Team</label><span>3 Nova Mind engineers</span></div>
+  </div>
+</div>
+
+<div class="case-body">
+  <h2>The Challenge</h2>
+  <p>Orion Group, a mid-size retail distributor with 8 regional warehouses, was losing an estimated €2.4M per year to overstock and stockout events. Their planning team relied on spreadsheet-based forecasting, which couldn't account for seasonal trends, regional demand variance, or supplier lead time variability.</p>
+  <p>They needed a system that could forecast demand at the SKU-location level across a 90-day horizon — and integrate with their existing ERP without a full migration.</p>
+
+  <h2>Our Approach</h2>
+  <p>Nova Mind ran a 2-week discovery sprint to map data sources, identify forecast-relevant signals, and define success metrics. We then built a three-stage solution:</p>
+  <p><strong style="color:#fff">1. Data foundation:</strong> Unified 4 years of sales data, supplier records, and regional marketing spend into a clean feature store using Apache Airflow and dbt.</p>
+  <p><strong style="color:#fff">2. Forecasting engine:</strong> Trained an ensemble model combining LightGBM for baseline demand and a custom Temporal Fusion Transformer for multi-horizon prediction. Achieved MAPE of 8.3% across all SKU-location pairs.</p>
+  <p><strong style="color:#fff">3. Planner dashboard:</strong> Built a React-based planning UI showing forecast confidence intervals, anomaly alerts, and one-click reorder recommendations. Integrated via REST API with their SAP ERP.</p>
+
+  <div class="results-grid">
+    <div class="result-card"><div class="result-n">34%</div><div class="result-l">Reduction in overstock costs</div></div>
+    <div class="result-card"><div class="result-n">8.3%</div><div class="result-l">Mean Absolute Percentage Error</div></div>
+    <div class="result-card"><div class="result-n">14wk</div><div class="result-l">Discovery to production</div></div>
+  </div>
+
+  <h2>Technology Stack</h2>
+  <div class="tech-tags">
+    <span class="tech-tag">Python</span><span class="tech-tag">LightGBM</span>
+    <span class="tech-tag">Temporal Fusion Transformer</span><span class="tech-tag">Apache Airflow</span>
+    <span class="tech-tag">dbt</span><span class="tech-tag">PostgreSQL</span>
+    <span class="tech-tag">FastAPI</span><span class="tech-tag">React</span>
+    <span class="tech-tag">AWS SageMaker</span><span class="tech-tag">SAP ERP Integration</span>
+  </div>
+
+  <h2>Outcome</h2>
+  <p>Deployed to production in week 14. In the first full quarter, Orion reduced overstock costs by 34% — equivalent to €820,000 in annualized savings. The planning team adopted the tool fully within the first month, with zero training sessions required due to the intuitive interface.</p>
+  <p>Nova Mind continues to support the platform on a retainer basis, adding new product categories and expanding the model to two new distribution regions.</p>
+</div>
+
+<div class="cta-strip">
+  <h2>Want results like this?</h2>
+  <p>Tell us about your forecasting or data challenge — we'll show you exactly how we'd approach it.</p>
+  <a href="../index.html#contact" class="btn-glow" style="display:inline-block;text-decoration:none;padding:.9rem 2.2rem;background:linear-gradient(135deg,#4f7fff,#9d78ff);color:#fff;border-radius:100px;font-weight:700;font-family:'Plus Jakarta Sans',sans-serif">Start a Conversation →</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /api/admin/
+
+Sitemap: https://novamind.ai/sitemap.xml

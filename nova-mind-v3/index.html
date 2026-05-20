@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Nova Mind — Full-Service Tech Agency. We build websites, apps, AI systems, automation, and modern digital solutions for businesses of any size."/>
+  <meta name="keywords" content="web development, mobile apps, AI solutions, automation, custom software, e-commerce, CRM, ERP, UI/UX design, tech agency"/>
+  <meta property="og:title" content="Nova Mind — Your Tech Partner"/>
+  <meta property="og:description" content="We build the digital future of your business."/>
+  <meta property="og:type" content="website"/>
+  <title>Nova Mind — Full-Service Tech Agency</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/features.css"/>
+</head>
+<body>
+
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-logo">Nova<span>.</span>Mind</div>
+    <div class="preloader-bar"><div class="preloader-fill" id="preloader-fill"></div></div>
+    <div class="preloader-pct" id="preloader-pct">0%</div>
+  </div>
+</div>
+
+<div class="scroll-indicator" id="scroll-bar"></div>
+<canvas id="bg-canvas"></canvas>
+<div id="cursor"><div id="cursor-dot"></div><div id="cursor-ring"></div></div>
+
+<!-- COOKIE BANNER -->
+<div id="cookie-banner" class="cookie-banner" style="display:none">
+  <div class="cookie-content">
+    <span>🍪 We use cookies to improve your experience and analyze site traffic.</span>
+    <div class="cookie-actions">
+      <button onclick="acceptCookies()" class="cookie-accept">Accept</button>
+      <button onclick="declineCookies()" class="cookie-decline">Decline</button>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo">Nova<span>.</span>Mind</div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#demo">Demo</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="visitors-pill" id="visitors-pill">
+      <span class="visitors-dot"></span>
+      <span id="visitors-count">12</span> online
+    </div>
+    <button class="nav-pill" onclick="scrollTo('contact')">Get a Quote ↗</button>
+  </div>
+  <button class="nav-hamburger" id="hamburger">&#9776;</button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <button class="mobile-close" id="mobile-close">✕</button>
+  <ul>
+    <li><a href="#services" onclick="closeMobileMenu()">Services</a></li>
+    <li><a href="#work" onclick="closeMobileMenu()">Work</a></li>
+    <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+    <li><a href="#team" onclick="closeMobileMenu()">Team</a></li>
+    <li><a href="#demo" onclick="closeMobileMenu()">Demo</a></li>
+    <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+  </ul>
+</div>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-chip"><span class="chip-pulse"></span>Full-Service Tech Agency</div>
+
+  <h1 class="hero-title">
+    We turn your ideas<br/>
+    into <em>powerful</em><br/>
+    <span class="hero-line2">digital products.</span>
+  </h1>
+
+  <p class="hero-sub">
+    Nova Mind builds websites, mobile apps, AI systems, automation tools,
+    and custom software — whatever your business needs to grow, we build it.
+  </p>
+
+  <div class="hero-actions">
+    <button class="btn-glow" onclick="scrollTo('services')">See What We Build</button>
+    <button class="btn-outline" onclick="scrollTo('contact')">Get a Free Quote</button>
+  </div>
+
+  <div class="stats-strip fade-up">
+    <div class="stat-item">
+      <div class="stat-n counter" data-target="80" data-suffix="+">0</div>
+      <div class="stat-l">Projects Delivered</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-n counter" data-target="50" data-suffix="+">0</div>
+      <div class="stat-l">Happy Clients</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-n counter" data-target="5">0</div>
+      <div class="stat-l">Years of Experience</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-n counter" data-target="20" data-suffix="+">0</div>
+      <div class="stat-l">Sectors Served</div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint fade-up">
+    <div class="scroll-line"></div>Scroll to explore
+  </div>
+</section>
+
+<!-- PRESS STRIP -->
+<div class="press-strip">
+  <span class="press-label">Trusted across sectors</span>
+  <div class="press-logos">
+    <span class="press-logo">Government</span>
+    <span class="press-logo">Public Sector</span>
+    <span class="press-logo">Healthcare</span>
+    <span class="press-logo">Finance</span>
+    <span class="press-logo">Education</span>
+    <span class="press-logo">Retail</span>
+    <span class="press-logo">Logistics</span>
+    <span class="press-logo">Real Estate</span>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-section">
+  <div class="marquee-fade-l"></div><div class="marquee-fade-r"></div>
+  <div class="marquee-track">
+    <span class="m-item">Web Apps</span><span class="m-sep">◆</span>
+    <span class="m-item">Mobile Apps</span><span class="m-sep">◆</span>
+    <span class="m-item">AI Solutions</span><span class="m-sep">◆</span>
+    <span class="m-item">E-Commerce</span><span class="m-sep">◆</span>
+    <span class="m-item">Automation</span><span class="m-sep">◆</span>
+    <span class="m-item">Custom CRM</span><span class="m-sep">◆</span>
+    <span class="m-item">Gov & Public Sector</span><span class="m-sep">◆</span>
+    <span class="m-item">Cloud Systems</span><span class="m-sep">◆</span>
+    <span class="m-item">UI/UX Design</span><span class="m-sep">◆</span>
+    <span class="m-item">Web Apps</span><span class="m-sep">◆</span>
+    <span class="m-item">Mobile Apps</span><span class="m-sep">◆</span>
+    <span class="m-item">AI Solutions</span><span class="m-sep">◆</span>
+    <span class="m-item">E-Commerce</span><span class="m-sep">◆</span>
+    <span class="m-item">Automation</span><span class="m-sep">◆</span>
+    <span class="m-item">Custom CRM</span><span class="m-sep">◆</span>
+    <span class="m-item">Gov & Public Sector</span><span class="m-sep">◆</span>
+    <span class="m-item">Cloud Systems</span><span class="m-sep">◆</span>
+    <span class="m-item">UI/UX Design</span><span class="m-sep">◆</span>
+  </div>
+</div>
+
+<!-- ── SERVICES + SELECTOR ── -->
+<section id="services">
+  <div class="services-intro fade-up">
+    <div class="sec-eyebrow">Services</div>
+    <h2 class="sec-title">What does your business need?</h2>
+    <p class="sec-sub">From a simple landing page to a full enterprise system — we've built it all. Tell us your challenge.</p>
+  </div>
+
+  <div class="service-selector fade-up">
+    <div class="selector-tabs">
+      <button class="sel-tab active" data-service="web">I need a website or app</button>
+      <button class="sel-tab" data-service="ecommerce">I want to sell online</button>
+      <button class="sel-tab" data-service="ai">I want to use AI</button>
+      <button class="sel-tab" data-service="automation">I want to automate tasks</button>
+      <button class="sel-tab" data-service="system">I need a custom system</button>
+      <button class="sel-tab" data-service="gov">Government / Public sector</button>
+    </div>
+    <div class="selector-panel" id="selector-panel"></div>
+  </div>
+
+  <div class="services-layout fade-up" style="margin-top:5rem">
+    <div>
+      <div class="services-list">
+        <div class="srv-item"><span class="srv-num">01</span><div class="srv-info"><h3>Websites & Web Apps</h3><p>From landing pages to complex web platforms — fast, beautiful, responsive</p></div><span class="srv-arrow">→</span></div>
+        <div class="srv-item"><span class="srv-num">02</span><div class="srv-info"><h3>Mobile Apps</h3><p>iOS & Android apps that users love — native or cross-platform with React Native</p></div><span class="srv-arrow">→</span></div>
+        <div class="srv-item"><span class="srv-num">03</span><div class="srv-info"><h3>AI & Machine Learning</h3><p>Smart features, chatbots, recommendations, and automation powered by AI</p></div><span class="srv-arrow">→</span></div>
+        <div class="srv-item"><span class="srv-num">04</span><div class="srv-info"><h3>E-Commerce Solutions</h3><p>Online stores, payment systems, inventory management, and growth tools</p></div><span class="srv-arrow">→</span></div>
+        <div class="srv-item"><span class="srv-num">05</span><div class="srv-info"><h3>Custom Business Systems</h3><p>CRM, ERP, dashboards, and internal tools built exactly for how you work</p></div><span class="srv-arrow">→</span></div>
+        <div class="srv-item"><span class="srv-num">06</span><div class="srv-info"><h3>Cloud & DevOps</h3><p>Scalable infrastructure, CI/CD pipelines, and reliable system architecture</p></div><span class="srv-arrow">→</span></div>
+        <div class="srv-item"><span class="srv-num">07</span><div class="srv-info"><h3>Government & Public Sector</h3><p>Secure, compliant digital systems for government agencies and public institutions</p></div><span class="srv-arrow">→</span></div>
+      </div>
+    </div>
+    <div class="services-visual">
+      <div class="srv-card tall ci1">
+        <div class="card-ico ci1">🚀</div>
+        <h3>From Idea to Live Product</h3>
+        <p>We handle everything — design, development, testing, deployment, and ongoing support. You focus on your business, we handle the tech.</p>
+        <span class="srv-tag">End-to-End</span>
+      </div>
+      <div class="srv-card ci2">
+        <div class="card-ico ci2">⚡</div>
+        <h3>Fast Delivery</h3>
+        <p>MVPs in weeks. Full products in months. Not years.</p>
+      </div>
+      <div class="srv-card ci3">
+        <div class="card-ico ci3">🔧</div>
+        <h3>Ongoing Support</h3>
+        <p>We stay with you after launch — updates, fixes, and new features.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROI CALCULATOR -->
+<section id="roi" style="background:var(--bg2)">
+  <div class="roi-header fade-up">
+    <div class="sec-eyebrow">ROI Estimator</div>
+    <h2 class="sec-title">How much could the right tech save you?</h2>
+    <p class="sec-sub">Estimate the value of building or upgrading your digital systems with Nova Mind.</p>
+  </div>
+  <div class="roi-layout fade-up">
+    <div class="roi-controls">
+      <div class="roi-select-row">
+        <label>What do you want to build?</label>
+        <select id="roi-usecase" onchange="calcROI()">
+          <option value="data">Data Pipeline &amp; Dashboard</option>
+          <option value="automation">Business Process Automation</option>
+          <option value="ecommerce">E-Commerce Platform</option>
+          <option value="app">Custom Web / Mobile App</option>
+        </select>
+      </div>
+      <div class="roi-slider-group">
+        <div class="roi-slider-row"><label>Team size (people)</label><div class="slider-val" id="sv-team">20</div></div>
+        <input type="range" min="1" max="500" value="20" id="sl-team" oninput="calcROI()"/>
+      </div>
+      <div class="roi-slider-group">
+        <div class="roi-slider-row"><label>Hours/week lost to manual tasks</label><div class="slider-val" id="sv-hours">15</div></div>
+        <input type="range" min="1" max="60" value="15" id="sl-hours" oninput="calcROI()"/>
+      </div>
+      <div class="roi-slider-group">
+        <div class="roi-slider-row"><label>Average hourly cost (€)</label><div class="slider-val" id="sv-rate">45</div></div>
+        <input type="range" min="10" max="200" value="45" id="sl-rate" oninput="calcROI()"/>
+      </div>
+      <div class="roi-slider-group">
+        <div class="roi-slider-row"><label>Efficiency improvement target (%)</label><div class="slider-val" id="sv-error">30</div></div>
+        <input type="range" min="5" max="95" value="30" id="sl-error" oninput="calcROI()"/>
+      </div>
+    </div>
+    <div class="roi-results">
+      <div class="roi-card main-saving">
+        <div class="roi-card-label">Annual Value Generated</div>
+        <div class="roi-card-value" id="roi-saving">€0</div>
+        <div class="roi-card-sub">Based on your inputs</div>
+      </div>
+      <div class="roi-card-row">
+        <div class="roi-card"><div class="roi-card-label">Hours Saved / yr</div><div class="roi-card-value sm" id="roi-hours">0</div></div>
+        <div class="roi-card"><div class="roi-card-label">Payback Period</div><div class="roi-card-value sm" id="roi-payback">0 mo</div></div>
+        <div class="roi-card"><div class="roi-card-label">3-Year ROI</div><div class="roi-card-value sm" id="roi-3yr">0×</div></div>
+      </div>
+      <button class="btn-glow" style="width:100%;margin-top:1rem;border-radius:12px" onclick="scrollTo('contact')">Get a Real Estimate →</button>
+    </div>
+  </div>
+</section>
+
+<!-- AI CHAT DEMO -->
+<section id="demo">
+  <div class="demo-header fade-up">
+    <div class="sec-eyebrow">Live Demo</div>
+    <h2 class="sec-title">See what we can build for you</h2>
+    <p class="sec-sub">Talk to our AI assistant or explore demos of what Nova Mind delivers for clients.</p>
+  </div>
+  <div class="demo-layout fade-up">
+    <div class="demo-scenarios">
+      <div class="scenario-card active" data-scenario="nova" onclick="setScenario('nova')">
+        <div class="scenario-icon">💬</div>
+        <h3>Nova Mind Assistant</h3>
+        <p>Ask anything — services, pricing, timelines, or what we'd build for you</p>
+      </div>
+      <div class="scenario-card" data-scenario="legal" onclick="setScenario('legal')">
+        <div class="scenario-icon">🏪</div>
+        <h3>Business Consultant AI</h3>
+        <p>See how we build AI advisors for client-facing businesses</p>
+      </div>
+      <div class="scenario-card" data-scenario="data" onclick="setScenario('data')">
+        <div class="scenario-icon">📊</div>
+        <h3>Data & Analytics AI</h3>
+        <p>Ask business questions and get AI-powered insights from your data</p>
+      </div>
+    </div>
+    <div class="demo-chat">
+      <div class="chat-header">
+        <div class="chat-status-dot"></div>
+        <span id="chat-title">Nova Mind Assistant</span>
+        <button class="chat-clear" onclick="clearChat()">Clear</button>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+        <div class="chat-msg assistant">
+          <div class="chat-avatar">NM</div>
+          <div class="chat-bubble">Hi! I'm the Nova Mind assistant. I can tell you about our services, help you figure out what to build, discuss timelines and pricing, or answer any tech question. What's on your mind? 👋</div>
+        </div>
+      </div>
+      <div class="chat-quick-replies" id="quick-replies">
+        <button onclick="sendQuick('What can Nova Mind build for my business?')">What can you build for me?</button>
+        <button onclick="sendQuick('How much does a website cost?')">How much does a website cost?</button>
+        <button onclick="sendQuick('How long does a project take?')">How long does it take?</button>
+      </div>
+      <div class="chat-input-row">
+        <input id="chat-input" type="text" placeholder="Ask anything…" onkeydown="if(event.key==='Enter')sendMessage()"/>
+        <button class="chat-send" onclick="sendMessage()">↑</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="work" style="background:var(--bg2)">
+  <div class="work-header fade-up">
+    <div><div class="sec-eyebrow">Portfolio</div><h2 class="sec-title">What we've built</h2></div>
+    <p class="work-header-desc">Real projects for real businesses — across industries and scales.</p>
+  </div>
+  <div class="work-grid fade-up">
+
+    <div class="wc wc-a">
+      <div class="wc-thumb">
+        <svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="280" fill="#080e22"/>
+          <rect x="30" y="30" width="160" height="220" rx="10" fill="#0d1530" stroke="#4f7fff" stroke-width=".5" opacity=".6"/>
+          <rect x="45" y="50" width="130" height="12" rx="3" fill="#4f7fff" opacity=".4"/>
+          <rect x="45" y="72" width="90" height="8" rx="2" fill="#4f7fff" opacity=".2"/>
+          <rect x="45" y="90" width="130" height="70" rx="6" fill="#0a1840" stroke="#4f7fff" stroke-width=".5" opacity=".4"/>
+          <rect x="45" y="172" width="60" height="24" rx="6" fill="#4f7fff" opacity=".7"/>
+          <rect x="45" y="206" width="130" height="8" rx="2" fill="#4f7fff" opacity=".15"/>
+          <rect x="220" y="30" width="150" height="100" rx="10" fill="#0d1530" stroke="#9d78ff" stroke-width=".5" opacity=".6"/>
+          <rect x="235" y="50" width="120" height="8" rx="2" fill="#9d78ff" opacity=".4"/>
+          <rect x="235" y="68" width="80" height="8" rx="2" fill="#9d78ff" opacity=".2"/>
+          <polyline points="235,110 255,90 275,100 295,75 315,85 340,60" fill="none" stroke="#9d78ff" stroke-width="1.5" opacity=".7"/>
+          <rect x="220" y="145" width="150" height="105" rx="10" fill="#0d1530" stroke="#2eeab8" stroke-width=".5" opacity=".6"/>
+          <rect x="235" y="162" width="120" height="8" rx="2" fill="#2eeab8" opacity=".3"/>
+          <circle cx="263" cy="200" r="18" fill="rgba(46,234,184,0.15)" stroke="#2eeab8" stroke-width=".5"/>
+          <circle cx="295" cy="195" r="22" fill="rgba(79,127,255,0.15)" stroke="#4f7fff" stroke-width=".5"/>
+          <circle cx="323" cy="202" r="14" fill="rgba(157,120,255,0.15)" stroke="#9d78ff" stroke-width=".5"/>
+        </svg>
+        <span class="wc-badge">SaaS Platform</span>
+      </div>
+      <div class="wc-body">
+        <div class="wc-tag">Web App · Dashboard · Analytics</div>
+        <h3>RetailOS — Retail Management Platform</h3>
+        <p>Full-stack SaaS platform with inventory management, sales analytics, and AI-powered restocking recommendations for a retail chain with 12 locations.</p>
+      </div>
+    </div>
+
+    <div class="wc wc-b">
+      <div class="wc-thumb">
+        <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="300" height="220" fill="#0a0d1a"/>
+          <rect x="90" y="15" width="120" height="190" rx="16" fill="#111828" stroke="#4f7fff" stroke-width=".5" opacity=".6"/>
+          <rect x="130" y="30" width="40" height="5" rx="3" fill="#4f7fff" opacity=".3"/>
+          <rect x="100" y="50" width="100" height="65" rx="8" fill="#0a1228" stroke="#4f7fff" stroke-width=".3" opacity=".5"/>
+          <rect x="110" y="62" width="80" height="6" rx="2" fill="#4f7fff" opacity=".35"/>
+          <rect x="110" y="76" width="55" height="5" rx="2" fill="#4f7fff" opacity=".2"/>
+          <rect x="110" y="88" width="65" height="5" rx="2" fill="#4f7fff" opacity=".15"/>
+          <rect x="100" y="126" width="45" height="22" rx="6" fill="#4f7fff" opacity=".7"/>
+          <rect x="155" y="126" width="45" height="22" rx="6" fill="none" stroke="#4f7fff" stroke-width=".5" opacity=".5"/>
+          <rect x="100" y="160" width="100" height="5" rx="2" fill="#9d78ff" opacity=".2"/>
+          <rect x="100" y="172" width="70" height="5" rx="2" fill="#9d78ff" opacity=".15"/>
+          <circle cx="60" cy="90" r="25" fill="#0d1428" stroke="#2eeab8" stroke-width=".5" opacity=".5"/>
+          <circle cx="60" cy="90" r="10" fill="rgba(46,234,184,0.2)"/>
+          <circle cx="240" cy="130" r="20" fill="#0d1428" stroke="#9d78ff" stroke-width=".5" opacity=".5"/>
+        </svg>
+        <span class="wc-badge">Mobile App</span>
+      </div>
+      <div class="wc-body">
+        <div class="wc-tag">iOS &amp; Android · React Native</div>
+        <h3>MediBook — Patient Appointment App</h3>
+        <p>Cross-platform mobile app for a healthcare clinic — online booking, reminders, medical records, and telemedicine video calls.</p>
+      </div>
+    </div>
+
+    <div class="wc wc-c">
+      <div class="wc-thumb wc-thumb-sm">
+        <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="200" height="180" fill="#0a0e1a"/>
+          <rect x="10" y="10" width="180" height="30" rx="6" fill="#111828" stroke="#2eeab8" stroke-width=".4" opacity=".5"/>
+          <rect x="20" y="20" width="60" height="10" rx="3" fill="#2eeab8" opacity=".4"/>
+          <rect x="140" y="22" width="40" height="6" rx="3" fill="#2eeab8" opacity=".2"/>
+          <rect x="10" y="50" width="85" height="120" rx="6" fill="#111828" stroke="#4f7fff" stroke-width=".4" opacity=".5"/>
+          <rect x="105" y="50" width="85" height="55" rx="6" fill="#111828" stroke="#9d78ff" stroke-width=".4" opacity=".5"/>
+          <rect x="105" y="115" width="85" height="55" rx="6" fill="#111828" stroke="#2eeab8" stroke-width=".4" opacity=".5"/>
+          <rect x="20" y="62" width="65" height="6" rx="2" fill="#4f7fff" opacity=".35"/>
+          <rect x="20" y="76" width="50" height="5" rx="2" fill="#4f7fff" opacity=".2"/>
+          <polyline points="115,100 130,85 145,92 160,75 175,80" fill="none" stroke="#9d78ff" stroke-width="1.2" opacity=".7"/>
+        </svg>
+        <span class="wc-badge">E-Commerce</span>
+      </div>
+      <div class="wc-body">
+        <div class="wc-tag">Online Store · Payments · CMS</div>
+        <h3>LuxBrand — Fashion E-Commerce Store</h3>
+        <p>Custom Shopify-level store with smart filters, multi-currency, and a 3× increase in conversion rate.</p>
+      </div>
+    </div>
+
+    <div class="wc wc-d">
+      <div class="wc-thumb wc-thumb-sm">
+        <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="200" height="180" fill="#0d1010"/>
+          <rect x="15" y="15" width="170" height="150" rx="8" fill="#111c1c" stroke="#2eeab8" stroke-width=".4" opacity=".4"/>
+          <circle cx="100" cy="90" r="50" fill="none" stroke="#2eeab8" stroke-width=".5" opacity=".3"/>
+          <circle cx="100" cy="90" r="35" fill="none" stroke="#2eeab8" stroke-width=".5" opacity=".2"/>
+          <circle cx="100" cy="90" r="8" fill="rgba(46,234,184,0.3)"/>
+          <circle cx="100" cy="90" r="4" fill="#2eeab8"/>
+          <circle cx="100" cy="40" r="5" fill="#4f7fff" opacity=".8"/>
+          <circle cx="145" cy="65" r="5" fill="#9d78ff" opacity=".8"/>
+          <circle cx="145" cy="115" r="5" fill="#2eeab8" opacity=".8"/>
+          <circle cx="100" cy="140" r="5" fill="#ff6b6b" opacity=".8"/>
+          <circle cx="55" cy="115" r="5" fill="#4f7fff" opacity=".8"/>
+          <line x1="100" y1="86" x2="100" y2="44" stroke="#4f7fff" stroke-width=".5" opacity=".4"/>
+          <line x1="100" y1="86" x2="141" y2="67" stroke="#9d78ff" stroke-width=".5" opacity=".4"/>
+          <line x1="100" y1="94" x2="141" y2="113" stroke="#2eeab8" stroke-width=".5" opacity=".4"/>
+          <line x1="100" y1="94" x2="100" y2="136" stroke="#ff6b6b" stroke-width=".5" opacity=".4"/>
+          <line x1="100" y1="94" x2="59" y2="113" stroke="#4f7fff" stroke-width=".5" opacity=".4"/>
+        </svg>
+        <span class="wc-badge">Custom CRM</span>
+      </div>
+      <div class="wc-body">
+        <div class="wc-tag">CRM · Automation · Integrations</div>
+        <h3>PropFlow — Real Estate CRM System</h3>
+        <p>End-to-end CRM for a real estate agency — lead tracking, automated follow-ups, contract generation, and agent dashboards.</p>
+      </div>
+    </div>
+
+    <div class="wc wc-e">
+      <div class="wc-thumb wc-thumb-sm">
+        <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+          <rect width="200" height="180" fill="#0d0a1a"/>
+          <rect x="15" y="15" width="170" height="30" rx="6" fill="#150e28" stroke="#9d78ff" stroke-width=".4" opacity=".5"/>
+          <rect x="25" y="24" width="50" height="12" rx="3" fill="#9d78ff" opacity=".5"/>
+          <rect x="130" y="26" width="45" height="8" rx="2" fill="#9d78ff" opacity=".2"/>
+          <rect x="15" y="55" width="80" height="110" rx="6" fill="#150e28" stroke="#9d78ff" stroke-width=".4" opacity=".4"/>
+          <rect x="105" y="55" width="80" height="50" rx="6" fill="#150e28" stroke="#4f7fff" stroke-width=".4" opacity=".4"/>
+          <rect x="105" y="115" width="80" height="50" rx="6" fill="#150e28" stroke="#2eeab8" stroke-width=".4" opacity=".4"/>
+          <rect x="25" y="68" width="60" height="6" rx="2" fill="#9d78ff" opacity=".4"/>
+          <rect x="25" y="82" width="45" height="5" rx="2" fill="#9d78ff" opacity=".2"/>
+          <rect x="25" y="95" width="55" height="5" rx="2" fill="#9d78ff" opacity=".2"/>
+          <rect x="25" y="130" width="60" height="18" rx="5" fill="#9d78ff" opacity=".5"/>
+        </svg>
+        <span class="wc-badge">AI Chatbot</span>
+      </div>
+      <div class="wc-body">
+        <div class="wc-tag">AI · Customer Support · Automation</div>
+        <h3>HotelBot — AI Concierge System</h3>
+        <p>AI-powered chatbot for a hotel chain handling bookings, FAQs, room service, and guest feedback — 24/7, in 5 languages.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-content fade-up">
+      <div class="sec-eyebrow">About Nova Mind</div>
+      <h2 class="sec-title">Your tech partner from day one.</h2>
+      <p class="sec-sub">Nova Mind is a full-service technology agency. We work with organisations of all sizes and types — from early-stage startups and growing SMEs to large enterprises, government agencies, and public sector institutions — to design, build, and launch the digital products they need.</p>
+      <p class="sec-sub" style="margin-top:1rem">Whether you need a simple website, a complex enterprise system, or a cutting-edge AI solution, we have the expertise and the team to make it happen — on time, on budget, and built to last.</p>
+      <div class="about-features">
+        <div class="af-item"><div class="af-icon">🎯</div><h4>Any Client, Any Scale</h4><p>Startups, SMEs, enterprises, government bodies, and public institutions</p></div>
+        <div class="af-item"><div class="af-icon">⚡</div><h4>Fast & Reliable</h4><p>MVPs in weeks. We don't miss deadlines.</p></div>
+        <div class="af-item"><div class="af-icon">🔧</div><h4>Full Stack</h4><p>Design, frontend, backend, mobile, AI — all under one roof</p></div>
+        <div class="af-item"><div class="af-icon">🤝</div><h4>Long-Term Partner</h4><p>We stay with you after launch — support, updates, growth</p></div>
+      </div>
+    </div>
+    <div class="about-visual-side fade-up">
+      <div class="av-main">
+        <div class="av-glow"></div><div class="av-glow2"></div><div class="av-grid-bg"></div>
+        <div class="av-content">
+          <div class="av-label"><span class="av-label-dot"></span>Open for new projects</div>
+          <h3 class="av-title">We build what<br/>your business needs.</h3>
+          <p class="av-desc">No cookie-cutter solutions. Every project is custom-built to fit your goals, your users, and your budget.</p>
+          <div class="av-metrics">
+            <div class="av-metric"><div class="av-metric-n" style="color:var(--a1)">80+</div><div class="av-metric-l">Projects</div></div>
+            <div class="av-metric"><div class="av-metric-n" style="color:var(--a2)">20+</div><div class="av-metric-l">Sectors</div></div>
+            <div class="av-metric"><div class="av-metric-n" style="color:var(--a3)">50+</div><div class="av-metric-l">Clients</div></div>
+          </div>
+          <div class="av-tags">
+            <span class="av-tag">React &amp; Next.js</span>
+            <span class="av-tag">React Native</span>
+            <span class="av-tag">Node.js</span>
+            <span class="av-tag">Python / AI</span>
+            <span class="av-tag">AWS / GCP</span>
+            <span class="av-tag">UI/UX Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" style="background:var(--bg2)">
+  <div class="team-header fade-up">
+    <div class="sec-eyebrow">The Team</div>
+    <h2 class="sec-title">The people who build your product</h2>
+    <p class="sec-sub" style="margin-top:.5rem">A tight team of experienced developers, designers, and strategists.</p>
+  </div>
+  <div class="team-grid fade-up">
+    <div class="team-card"><div class="tc-top"><div class="tc-bg tbg1"></div><div class="tc-av tav1">NM</div></div><div class="tc-body"><h3>Nadia Malik</h3><div class="tc-role">CEO &amp; Co-founder</div><div class="tc-socials"><div class="tc-social">in</div><div class="tc-social">𝕏</div></div></div></div>
+    <div class="team-card"><div class="tc-top"><div class="tc-bg tbg2"></div><div class="tc-av tav2">AR</div></div><div class="tc-body"><h3>Amir Rashidi</h3><div class="tc-role">CTO &amp; Lead Developer</div><div class="tc-socials"><div class="tc-social">in</div><div class="tc-social">gh</div></div></div></div>
+    <div class="team-card"><div class="tc-top"><div class="tc-bg tbg3"></div><div class="tc-av tav3">SL</div></div><div class="tc-body"><h3>Sara Lin</h3><div class="tc-role">Head of Design &amp; UX</div><div class="tc-socials"><div class="tc-social">in</div><div class="tc-social">be</div></div></div></div>
+    <div class="team-card"><div class="tc-top"><div class="tc-bg tbg4"></div><div class="tc-av tav4">TK</div></div><div class="tc-body"><h3>Tom Kessler</h3><div class="tc-role">Mobile &amp; AI Engineer</div><div class="tc-socials"><div class="tc-social">in</div><div class="tc-social">gh</div></div></div></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="fade-up"><div class="sec-eyebrow">Testimonials</div><h2 class="sec-title">What our clients say</h2></div>
+  <div class="test-grid fade-up">
+    <div class="test-card">
+      <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+      <p class="test-quote">"Nova Mind built our entire platform from scratch in 10 weeks. Clean code, great design, and they actually listened to what we needed. Best tech partner we've worked with."</p>
+      <div class="test-author"><div class="test-av ta1">JD</div><div><div class="test-name">James Dolan</div><div class="test-co">CEO, RetailOS</div></div></div>
+    </div>
+    <div class="test-card">
+      <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+      <p class="test-quote">"We came with just an idea. They turned it into a fully working mobile app in 2 months. The UX is beautiful and our patients love it. Couldn't be happier."</p>
+      <div class="test-author"><div class="test-av ta2">FM</div><div><div class="test-name">Dr. Fatima Morel</div><div class="test-co">Founder, MediBook</div></div></div>
+    </div>
+    <div class="test-card">
+      <div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+      <p class="test-quote">"Our old website was losing us clients. Nova Mind redesigned and rebuilt everything — our conversion rate tripled in the first month. Seriously impressive team."</p>
+      <div class="test-author"><div class="test-av ta3">RC</div><div><div class="test-name">Rafael Costa</div><div class="test-co">Director, LuxBrand</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking" style="background:var(--bg2)">
+  <div class="booking-wrap fade-up">
+    <div class="sec-eyebrow" style="justify-content:center">Free Consultation</div>
+    <h2 class="sec-title" style="text-align:center">Let's talk about your project</h2>
+    <p class="sec-sub" style="text-align:center;margin:0 auto 2.5rem;max-width:480px">Book a free 30-minute call. We'll listen to your needs, ask the right questions, and tell you honestly what we'd build and what it would cost.</p>
+    <div class="booking-card">
+      <div class="booking-info">
+        <div class="booking-item"><span class="booking-icon">⏱</span><span>30 minutes</span></div>
+        <div class="booking-item"><span class="booking-icon">🎥</span><span>Video call (Google Meet / Zoom)</span></div>
+        <div class="booking-item"><span class="booking-icon">🆓</span><span>Free, zero obligation</span></div>
+        <div class="booking-item"><span class="booking-icon">📋</span><span>You'll get a clear proposal within 48hrs</span></div>
+      </div>
+      <a href="https://calendly.com/novamind/discovery" target="_blank" class="btn-glow booking-btn">Book a Free Call →</a>
+      <p class="booking-note">Prefer email? <a href="mailto:hello@novamind.ai">hello@novamind.ai</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-container">
+    <div class="contact-header fade-up">
+      <div class="sec-eyebrow" style="justify-content:center">Contact</div>
+      <h2 class="sec-title">Have a project in mind?<br/><em class="gradient-italic">Let's build it.</em></h2>
+      <p class="sec-sub contact-sub">Tell us what you need — we'll come back with a clear plan and honest quote within 24 hours.</p>
+    </div>
+    <div class="contact-box fade-up">
+      <div class="form-grid">
+        <div class="fg"><label for="fname">First Name</label><input id="fname" type="text" placeholder="Alex"/></div>
+        <div class="fg"><label for="lname">Last Name</label><input id="lname" type="text" placeholder="Johnson"/></div>
+        <div class="fg"><label for="email">Email</label><input id="email" type="email" placeholder="alex@company.com"/></div>
+        <div class="fg"><label for="company">Company / Business</label><input id="company" type="text" placeholder="My Business"/></div>
+        <div class="fg full"><label for="service">What do you need?</label>
+          <select id="service">
+            <option>Website or Web App</option>
+            <option>Mobile App (iOS / Android)</option>
+            <option>E-Commerce Store</option>
+            <option>AI or Automation Solution</option>
+            <option>Custom CRM / ERP System</option>
+            <option>Government / Public Sector System</option>
+            <option>UI/UX Design</option>
+            <option>Cloud / DevOps</option>
+            <option>Not sure yet — I need advice</option>
+          </select>
+        </div>
+        <div class="fg full"><label for="message">Tell us about your project</label><textarea id="message" placeholder="Describe what you want to build, your goals, timeline, and any other details…"></textarea></div>
+        <div class="submit-row full">
+          <span class="submit-note">🔒 We'll never share your info</span>
+          <button class="btn-submit" onclick="handleSubmit()">Send Message →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Nova<span>.</span>Mind</div>
+    <ul class="footer-nav">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 Nova Mind. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/features.js"></script>
+<script src="js/chat.js"></script>
+<script src="js/roi.js"></script>
+</body>
+</html>
